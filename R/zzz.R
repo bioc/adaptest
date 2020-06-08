@@ -1,6 +1,6 @@
 .onAttach <- function(...) {
-  packageStartupMessage(paste0(
-    "adaptest v", utils::packageDescription("adaptest")$Version,
-    ": Data-Adaptive Statistics for High-Dimensional Multiple Testing"
-  ))
+    msg <- sprintf(
+        "Package '%s' is deprecated and will be removed from Bioconductor
+         version %s", pkgname, "3.13")
+    .Deprecated(msg=paste(strwrap(msg, exdent=2), collapse="\n"))
 }
